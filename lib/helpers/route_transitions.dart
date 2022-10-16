@@ -9,6 +9,7 @@ class RouteTransitions {
   final Duration duration;
   final bool replacement;
 
+  @deprecated
   RouteTransitions(
       {required this.context,
       required this.child,
