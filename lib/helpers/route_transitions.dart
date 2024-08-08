@@ -26,16 +26,20 @@ class RouteTransitions {
     }
   }
 
+//---------------------------------------------------------------------------
   void _pushPage(Route route) => Navigator.push(context, route);
 
+//---------------------------------------------------------------------------
   void _pushReplacementPage(Route route) =>
       Navigator.pushReplacement(context, route);
 
+//---------------------------------------------------------------------------
   void _normalTransition() {
     final route = MaterialPageRoute(builder: (_) => child);
     replacement ? _pushReplacementPage(route) : _pushPage(route);
   }
 
+//---------------------------------------------------------------------------
   void _fadeInTransition() {
     final route = PageRouteBuilder(
         pageBuilder: (_, __, ___) => child,
